@@ -8,3 +8,4 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design;
 dotnet add package Microsoft.EntityFrameworkCore.Tools;
 dotnet aspnet-codegenerator controller -name CoursesController -m Course -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
 dotnet aspnet-codegenerator controller -name LecturersController -m Lecturer -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
+dotnet aspnet-codegenerator controller -name StudentsController -m Student -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
