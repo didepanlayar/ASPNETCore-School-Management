@@ -13,3 +13,4 @@ dotnet aspnet-codegenerator controller -name StudentsController -m Student -dc S
 dotnet ef dbcontext scaffold 'Server=localhost,1400;Database=SchoolManagement;Trusted_Connection=False;MultipleActiveResultSets=true;Encrypt=false;User Id=sa;Password=Rahasia@2023' Microsoft.EntityFrameworkCore.SqlServer -o Data -f --no-onconfiguring;
 dotnet aspnet-codegenerator controller -name ClassesController -m Class -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
 dotnet aspnet-codegenerator controller -name EnrollmentsController -m Enrollment -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
+dotnet add package Auth0.AspNetCore.Authentication
