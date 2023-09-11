@@ -10,6 +10,7 @@ using SchoolManagementApp.Data;
 
 namespace SchoolManagementApp.Controllers
 {
+    [Authorize]
     public class EnrollmentsController : Controller
     {
         private readonly SchoolManagementContext _context;
@@ -47,7 +48,6 @@ namespace SchoolManagementApp.Controllers
         }
 
         // GET: Enrollments/Create
-        [Authorize]
         public IActionResult Create()
         {
             ViewData["ClassId"] = new SelectList(_context.Classes, "Id", "Id");
@@ -74,7 +74,6 @@ namespace SchoolManagementApp.Controllers
         }
 
         // GET: Enrollments/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Enrollments == null)

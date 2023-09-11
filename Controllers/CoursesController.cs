@@ -10,6 +10,7 @@ using SchoolManagementApp.Data;
 
 namespace SchoolManagementApp.Controllers
 {
+    [Authorize]
     public class CoursesController : Controller
     {
         private readonly SchoolManagementContext _context;
@@ -46,7 +47,6 @@ namespace SchoolManagementApp.Controllers
         }
 
         // GET: Courses/Create
-        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -69,7 +69,6 @@ namespace SchoolManagementApp.Controllers
         }
 
         // GET: Courses/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Courses == null)
