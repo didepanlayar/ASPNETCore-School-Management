@@ -38,7 +38,8 @@
             <td>
                 <a class="btn btn-warning text-white" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a> 
                 <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i></a> 
-                <button type="button" class="btn btn-danger btn-delete" data-id="@item.Id"><i class="bi bi-trash"></i></button>
+                <button type="button" class="btn btn-danger btn-delete" data-id="@item.Id"><i class="bi bi-trash"></i></button> 
+                <a class="btn btn-success" asp-action="ManageEnrollments" asp-route-id="@item.Id">Manage Enrollments</a>
             </td>
         </tr>
 }

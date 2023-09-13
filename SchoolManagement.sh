@@ -14,3 +14,4 @@ dotnet ef dbcontext scaffold 'Server=localhost,1400;Database=SchoolManagement;Tr
 dotnet aspnet-codegenerator controller -name ClassesController -m Class -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
 dotnet aspnet-codegenerator controller -name EnrollmentsController -m Enrollment -dc SchoolManagementContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f;
 dotnet add package Auth0.AspNetCore.Authentication
+dotnet aspnet-codegenerator view ManageEnrollments Details -m ClassEnrollmentViewModel -outDir Views/Classes -f -udl
