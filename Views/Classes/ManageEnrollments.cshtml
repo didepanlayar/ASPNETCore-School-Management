@@ -4,8 +4,11 @@
     ViewData["Title"] = "Manage Enrollments";
 }
 
-<h2>Manage Enrollments for @Model.Class.Time Session of @Model.Class.Course.Code - @Model.Class.Course.Name</h2>
-<h3>Instructor: @Model.Class.Lecturer.FirstName @Model.Class.Lecturer.LastName</h3>
+<h1>Manage Enrollments</h1>
+<hr>
+<p>Instructor: @Model.Class.Lecturer.FirstName @Model.Class.Lecturer.LastName</p>
+<p>Course: @Model.Class.Course.Code - @Model.Class.Course.Name</p>
+<p>Time: @Model.Class.Time</p>
 <hr>
 <h3>Student List</h3>
 <table class="table">
