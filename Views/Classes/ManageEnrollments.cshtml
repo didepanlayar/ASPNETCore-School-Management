@@ -6,8 +6,8 @@
 
 <h1>Manage Enrollments</h1>
 <hr>
-<p>Instructor: @Model.Class.Lecturer.FirstName @Model.Class.Lecturer.LastName</p>
-<p>Course: @Model.Class.Course.Code - @Model.Class.Course.Name</p>
+<p>Instructor: @Model.Class.LecturerName</p>
+<p>Course: @Model.Class.CourseName</p>
 <p>Time: @Model.Class.Time</p>
 <hr>
 <h3>Student List</h3>
@@ -63,7 +63,7 @@
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: 'Yes, confirm!'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         var btn = $(this);

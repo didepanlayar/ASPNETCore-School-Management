@@ -165,17 +165,23 @@ namespace SchoolManagementApp.Controllers
         }
 
         // GET: Classes/ManageEnrollments/5
-        public async Task<ActionResult> ManageEnrollments(int id)
+        public async Task<ActionResult> ManageEnrollments(int classId)
         {
             var @class = await _context.Classes
                 .Include(q => q.Course)
                 .Include(q => q.Lecturer)
                 .Include(q => q.Enrollments)
                 .ThenInclude(q => q.Student)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == classId);
             var students = await _context.Students.ToListAsync();
             var model = new ClassEnrollmentViewModel();
-            model.Class = @class;
+            model.Class = new ClassViewModel
+            {
+                Id = @class.Id,
+                CourseName = $"{@class.Course.Code} - {@class.Course.Name}",
+                LecturerName = $"{@class.Lecturer.FirstName} {@class.Lecturer.LastName}",
+                Time = @class.Time.ToString()
+            };
             foreach (var stu in students)
             {
                 model.Students.Add(new StudentEnrollmentViewModel
